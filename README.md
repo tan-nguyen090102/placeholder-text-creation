@@ -1,6 +1,6 @@
 # Placeholder Text Creation
 
-This is a challenge project to generate a random paragraph using Lorem Ipsum list of words as a placeholder text using Angular v.19.
+This is a project to generate a random paragraph using Lorem Ipsum list of words as a placeholder text using Angular v.19.
 
 ## Install npm and Angular
 If you have not download Node.js and npm, go ahead and do so. After that, run the command
