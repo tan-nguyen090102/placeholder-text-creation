@@ -1,0 +1,44 @@
+.error-message {
+    color: red;
+    font-size: small;
+}
+
+.parent-container {
+    display: flex;
+    width: 800px;
+    flex-direction: column;
+}
+
+.paragraph-container {
+    width: 800px;
+    word-wrap: break-word;
+    white-space: pre-line;
+    border-color: black;
+    border-width: 20px;
+}
+
+.input-shape {
+    height: 25px;
+    padding-left: 5px;
+    font-size: medium;
+    border-width: 2px;
+    border-radius: 2px;
+}
+
+.spacer {
+    margin-bottom: 10px;
+}
+
+
+.button-shape {
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: cadetblue;
+
+    
+}
+
+.button-shape:hover {
+    background-color: rgb(31, 124, 128);
+}

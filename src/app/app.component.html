@@ -1,0 +1,28 @@
+<div class="parent-container">
+  <h1>Random Paragraph Generator</h1>
+  <label class="spacer">Please provide the number of paragraph to generate:</label>
+  <form [formGroup]="inputForm">
+    <input
+      class="spacer input-shape"
+      formControlName="numParagraph"
+      placeholder="Ex: 1"
+      type="number"
+    >
+    @if (inputForm.get('numParagraph')?.hasError('required') && inputForm.get('numParagraph')?.touched) {
+      <h2 class="error-message">Number of Paragraph is required</h2>
+    }
+    @if (inputForm.get('numParagraph')?.hasError('min') && inputForm.get('numParagraph')?.touched) {
+      <h2 class="error-message">Number of Paragraph is invalid. Please retry!</h2>
+    }
+    @if (inputForm.get('numParagraph')?.hasError('max') && inputForm.get('numParagraph')?.touched) {
+      <h2 class="error-message">Number of Paragraph is too many. Please lower the number!</h2>
+    }
+  </form>
+  <button class="button-shape" (click)="onGenerateParagraph()" [disabled]="inputForm.get('numParagraph')?.hasError('min') || inputForm.get('numParagraph')?.value === ''">Generate</button>
+  @if (paragraph !== "") {
+    <div class="paragraph-container">
+      <h2>Paragraph</h2>
+      <p>{{ paragraph }}</p>
+    </div>
+  }
+</div>
